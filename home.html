@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-menu {
+    display: flex;
+    background-color: #d6dfc1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 5;
+    padding: 3px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-right: 25px; 
+}
+
+.tab-button:hover {
+    background-color: #555;
+}
+
+.tab-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 50px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.tab-content h1 {
+    margin-top: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="tab-menu">
+            <button class="tab-button" onclick="showTab('home')">Home</button>
+            <button class="tab-button" onclick="showTab('practice')">Practice Questions</button>
+            <button class="tab-button" onclick="showTab('topics')">Topics</button>
+            <button class="tab-button" onclick="showTab('pyq')">PYQs</button>
+            <button class="tab-button" onclick="showTab('company')">Company Specific Questions</button>
+            <button class="tab-button" onclick="showTab('help')">Help</button>
+        </nav>
+
+        <div id="home" class="tab-content">
+            <h1>Welcome to the Dashboard</h1>
+            <p>Select a tab to view content.</p>
+        </div>
+        <div id="practice" class="tab-content" style="display:none;">
+            <h1>Practice Questions</h1>
+            <p>Here you can find practice questions for various topics.</p>
+        </div>
+        <div id="topics" class="tab-content" style="display:none;">
+            <h1>Topics</h1>
+            <p>Explore different topics and study materials.</p>
+        </div>
+        <div id="pyq" class="tab-content" style="display:none;">
+            <h1>Previous Year Questions (PYQs)</h1>
+            <p>Access previous year questions for various exams.</p>
+        </div>
+        <div id="company" class="tab-content" style="display:none;">
+            <h1>Company Specific Questions</h1>
+            <p>Find questions specific to various companies.</p>
+        </div>
+        <div id="help" class="tab-content" style="display:none;">
+            <h1>Help</h1>
+            <p>If you need help, please refer to our FAQ section or contact support.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>i
+</body>
+</html>
